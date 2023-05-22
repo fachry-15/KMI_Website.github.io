@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kita Muda Indonesia</title>
+	<link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<!-- Tailwind -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<!-- Alpine -->
+	<script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+	<script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
+	<!-- AOS -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<!-- Custom style -->
+	<link rel="stylesheet" href="css/skilline.css" />
+	<!-- Poppins font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="antialiased">
+	<!-- navbar -->
+	<!-- <div x-data="{ open: false }" class="w-full text-gray-700 bg-cream">
+		<div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
+			<div class="flex flex-row items-center justify-between py-6">
+				<div class="relative md:mt-8">
+					<a href="#"
+						class="text-lg relative z-50 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline"><img
+							src="img/logo.png" alt="" style="max-width: 100px;"></a>
+				</div>
+				<button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+					<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+						<path x-show="!open" fill-rule="evenodd"
+							d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+							clip-rule="evenodd"></path>
+						<path x-show="open" fill-rule="evenodd"
+							d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+							clip-rule="evenodd"></path>
+					</svg>
+				</button>
+			</div>
+			<nav :class="{ 'transform md:transform-none': !open, 'h-full': open }"
+				class="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 scale-y-0">
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+					href="#">Home</a>
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+					href="#">About Us</a>
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+					href="#">Services</a>
+				<a class="px-10 py-3 mt-2 text-sm text-center bg-yellow-500 text-white rounded-full md:mt-8 md:ml-4"
+					href="#">Cari kode Pesananmu</a>
+			</nav>
+		</div>
+	</div> -->
+	<!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    theme: {
+      extend: {
+        gridTemplateRows: {
+          '[auto,auto,1fr]': 'auto auto 1fr',
+        },
+      },
+    },
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+	<div class="bg-white">
+		<div class="pt-6">
+			<nav aria-label="Breadcrumb">
+				<ol role="list" class="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+					<li>
+						<div class="flex items-center">
+							<a href="#" class="mr-2 text-sm font-medium text-gray-900">Menu</a>
+							<svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" aria-hidden="true"
+								class="h-5 w-4 text-gray-300">
+								<path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+							</svg>
+						</div>
+					</li>
+					<li>
+						<div class="flex items-center">
+							<a href="#" class="mr-2 text-sm font-medium text-gray-500 hover:text-gray-600">Cari Kode
+								Pemesanan</a>
+						</div>
+					</li>
+				</ol>
+			</nav>
+
+
+			<!-- component -->
+			<div style="margin-top: 5%; padding-left: 10%; padding-right: 10%;">
+				<div data-aos="flip-down" class="text-center max-w-screen-md mx-auto">
+					<h1 class="text-3xl font-bold mb-4">Halo,<span class="text-yellow-500"> Silahkan Masukkan Kode
+							Pesananmu</span>
+					</h1>
+					<p class="text-gray-500">Masukkan Kode Pesananmu yang anda dapatkan dari pemesanan yang berhasil
+						anda buat sebelumnya.</p>
+				</div>
+				<div class="flex flex-col p-2 py-6 m-h-screen">
+
+					<div class="bg-white items-center justify-between w-full flex rounded-full shadow-lg p-2 mb-5 sticky"
+						style="top: 5px">
+						<input
+							class="font-bold uppercase rounded-full w-full py-4 pl-4 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline lg:text-sm text-xs"
+							type="text" placeholder="Masukkan Kode Pemesanan Anda">
+
+						<div class="bg-gray-300 p-2 hover:bg-yellow-400 cursor-pointer mx-2 rounded-full">
+
+							<svg class="w-6 h-6 text-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+								fill="currentColor">
+								<path fill-rule="evenodd"
+									d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+									clip-rule="evenodd" />
+							</svg>
+
+						</div>
+
+					</div>
+
+
+					<div class="flex flex-col gap-4 lg:p-4 p-2  rounde-lg m-2">
+
+						<div class="lg:text-2xl md:text-xl text-lg lg:p-3 p-1 font-black text-gray-700">Hasil Pencarian
+						</div>
+
+						<div
+							class="flex items-center justify-between w-full p-2 lg:rounded-full md:rounded-full hover:bg-gray-100 cursor-pointer border-2 rounded-lg">
+
+							<div class="lg:flex md:flex items-center">
+								<div class="h-12 w-12 mb-2 lg:mb-0 border md:mb-0 rounded-full mr-3"></div>
+
+								<div class="flex flex-col">
+
+									<div class="text-sm leading-3 text-gray-700 font-bold w-full">Fachry Rizky .P -
+										KMI19190190</div>
+
+									<div class="text-xs text-gray-600 w-full mt-2">Annual Report (Status : <strong>Masih
+											Menunggu</strong>)</div>
+
+								</div>
+
+							</div>
+
+							<svg class="h-6 w-6 mr-1 invisible md:visible lg:visible xl:visible"
+								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd"
+									d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+									clip-rule="evenodd" />
+							</svg>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="mt-32" style="background-color: rgba(37, 38, 65, 1);">
+		<div class="max-w-lg mx-auto">
+			<div class="flex py-12 justify-center text-white items-center px-20 sm:px-36">
+				<div class="relative">
+					<h1 class="font-bold text-xl pr-5 relative z-50">Skilline</h1>
+					<svg class="w-11 h-11 absolute -top-2 -left-3 z-40" viewBox="0 0 79 79" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M35.9645 2.94975C37.9171 0.997129 41.0829 0.997127 43.0355 2.94975L76.0502 35.9645C78.0029 37.9171 78.0029 41.0829 76.0503 43.0355L43.0355 76.0502C41.0829 78.0029 37.9171 78.0029 35.9645 76.0503L2.94975 43.0355C0.997129 41.0829 0.997127 37.9171 2.94975 35.9645L35.9645 2.94975Z"
+							stroke="#26C1F2" stroke-width="2" />
+					</svg>
+				</div>
+				<span class="border-l border-gray-500 text-sm pl-5 py-2 font-semibold">Virtual Class for Zoom</span>
+			</div>
+			<div class="text-center pb-16 pt-5">
+				<label class="text-gray-300 font-semibold">Subscribe to get our Newsletter</label>
+				<div
+					class="px-5 sm:px-0 flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0 justify-center mt-3">
+					<input type="email" placeholder="Your Email"
+						class="rounded-full py-2 pl-5 bg-transparent border border-gray-400">
+					<button type="submit"
+						class="text-white w-40 sm:w-auto mx-auto sm:mx-0 font-semibold px-5 py-2 rounded-full"
+						style="background: linear-gradient(105.5deg, #545AE7 19.57%, #393FCF 78.85%);">Subscribe</button>
+				</div>
+			</div>
+			<div class="flex items-center text-gray-400 text-sm justify-center">
+				<a href="" class="pr-3">Careers</a>
+				<a href="" class="border-l border-gray-400 px-3">Privacy</a>
+				<a href="" class="border-l border-gray-400 pl-3">Terms & Conditions</a>
+			</div>
+			<div class="text-center text-white">
+				<p class="my-3 text-gray-400 text-sm">&copy; 2021 Class Technologies Inc. </p>
+				<div class="py-3 tracking-wide">
+					<p>Code By <span class="font-semibold">mhaecal</span></p>
+					<p>UI/UX By <span class="font-semibold">Irvan Moses</span></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- AOS init -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+
+</html>
