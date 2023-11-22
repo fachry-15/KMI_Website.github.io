@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kita Muda Indonesia</title>
+	<link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<!-- Tailwind -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<!-- Alpine -->
+	<script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+	<script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
+	<!-- AOS -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<!-- Custom style -->
+	<link rel="stylesheet" href="css/skilline.css" />
+	<!-- Poppins font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="antialiased">
+	<!-- navbar -->
+	<!-- <div x-data="{ open: false }" class="w-full text-gray-700 bg-cream">
+		<div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
+			<div class="flex flex-row items-center justify-between py-6">
+				<div class="relative md:mt-8">
+					<a href="#"
+						class="text-lg relative z-50 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline"><img
+							src="img/logo.png" alt="" style="max-width: 100px;"></a>
+				</div>
+				<button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+					<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+						<path x-show="!open" fill-rule="evenodd"
+							d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+							clip-rule="evenodd"></path>
+						<path x-show="open" fill-rule="evenodd"
+							d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+							clip-rule="evenodd"></path>
+					</svg>
+				</button>
+			</div>
+			<nav :class="{ 'transform md:transform-none': !open, 'h-full': open }"
+				class="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 scale-y-0">
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+					href="#">Home</a>
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+					href="#">About Us</a>
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+					href="#">Services</a>
+				<a class="px-10 py-3 mt-2 text-sm text-center bg-yellow-500 text-white rounded-full md:mt-8 md:ml-4"
+					href="#">Cari kode Pesananmu</a>
+			</nav>
+		</div>
+	</div> -->
+	<!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    theme: {
+      extend: {
+        gridTemplateRows: {
+          '[auto,auto,1fr]': 'auto auto 1fr',
+        },
+      },
+    },
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+	<div class="bg-white">
+		<div class="pt-6">
+			<nav aria-label="Breadcrumb">
+				<ol role="list" class="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+					<li>
+						<div class="flex items-center">
+							<a href="#" class="mr-2 text-sm font-medium text-gray-900">Menu</a>
+							<svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" aria-hidden="true"
+								class="h-5 w-4 text-gray-300">
+								<path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+							</svg>
+						</div>
+					</li>
+					<li>
+						<div class="flex items-center">
+							<a href="#" class="mr-2 text-sm font-medium text-gray-500 hover:text-gray-600">Hasil
+								Diagnosa</a>
+						</div>
+					</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+
+	<div style="margin-left: 10%; margin-top: 3%; margin-right: 10%; margin-bottom: 5%;">
+		<form>
+			<div class="space-y-12">
+				<div class="border-b border-gray-900/10 pb-12">
+					<h2 class="text-base font-semibold leading-7 text-gray-900">Form Diagnosa Kesehatan Mental</h2>
+					<p class="mt-1 text-sm leading-6 text-gray-600">Pastikan semua jawaban yang anda pilih mempengaruhi
+						hasil diagnosa. <br><strong>(Hasil Diagnosa ini Tidak bisa dijadikan pedoman hasil kondisi
+							kesehatan
+							mental anda lebih baik datang ke psikiater terdekat)</strong></p>
+					<br>
+					<div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+						<div class="sm:col-span-4">
+							<label for="text" class="block text-sm font-medium leading-6 text-gray-900">Nama Anda :
+							</label>
+							<div class="mt-2">
+								<input id="text" name="text" type="text" placeholder="Masukkan Nama Panjang Anda"
+									class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6">
+							</div>
+						</div>
+						<div class="sm:col-span-3">
+							<label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Email
+								:</label>
+							<div class="mt-2">
+								<input type="email" name="first-name" id="first-name" autocomplete="email"
+									placeholder="Masukkan email anda"
+									class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6">
+							</div>
+						</div>
+
+						<div class="sm:col-span-3" <label for="last-name"
+							class="block text-sm font-medium leading-6 text-gray-900">No. telepon
+							:</label>
+							<div class="mt-2">
+								<input type="text" name="last-name" id="last-name"
+									placeholder="Masukkan nomor telepon anda"
+									class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6">
+							</div>
+						</div>
+						<div class="col-span-full">
+							<label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">Alamat
+								anda :</label>
+							<div class="mt-2">
+								<input type="text" name="street-address" id="street-address"
+									autocomplete="street-address" placeholder="Masukkan alamat rumah anda"
+									class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6">
+							</div>
+						</div>
+
+						<div class="sm:col-span-2">
+							<label for="country" class="block text-sm font-medium leading-6 text-gray-900">Jenis
+								Pelayanan</label>
+							<div class="mt-2">
+								<select id="country" name="country" autocomplete="country-name"
+									class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset sm:max-w-xs sm:text-sm sm:leading-6">
+									<option>Pilih layanan yang anda inginkan</option>
+									<option>Konsultasi</option>
+									<option>Periksa</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="sm:col-span-2">
+							<label for="country" class="block text-sm font-medium leading-6 text-gray-900">Riwayat
+								Pemeriksaan Terakhir :</label>
+							<div class="mt-2">
+								<select id="country" name="country" autocomplete="country-name"
+									class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset sm:max-w-xs sm:text-sm sm:leading-6">
+									<option>Pilih layanan yang anda inginkan</option>
+									<option>Konsultasi</option>
+									<option>Periksa</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="col-span-4">
+							<label for="rumahsakit" class="block text-sm font-medium leading-6 text-gray-900">Klinik
+								atau Rumah Sakit :</label>
+							<div class="mt-2">
+								<select id="countries"
+									class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+									<option selected>Pilihlah klinik atau rumah sakit</option>
+									<option value="US">United States</option>
+									<option value="CA">Canada</option>
+									<option value="FR">France</option>
+									<option value="DE">Germany</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<div class="mt-6 flex items-center justify-end gap-x-6" style="margin-right: 10%;">
+		<button type="button" class="text-sm font-semibold leading-6 text-gray-900">Batalkan</button>
+		<button type="submit"
+			class="rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">kirim
+			Hasil Diagnosa</button>
+	</div>
+	</form>
+
+	</div>
+
+
+	<!-- AOS init -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+
+</html>
